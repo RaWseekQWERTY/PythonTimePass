@@ -1,9 +1,10 @@
 import random
-
+CLEAR = "\033[2J"
 user_wins = 0
 comp_wins = 0
 comp_options = ["Rock","Paper","Scissor"]
 while True:
+    print(CLEAR)
     user_input = int(input("Type \n"+"1. For Rock\n"+"2. For Paper\n"+"3. For Scissors \n"+"4. To Quit\n"))
     
     if user_input == 4:
