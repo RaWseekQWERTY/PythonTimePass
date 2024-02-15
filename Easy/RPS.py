@@ -24,6 +24,8 @@ while True:
     elif user_input == 3 and comp_pick == "Paper":
         print("You won")
         user_wins+=1
+    elif user_input == comp_pick:
+        print("Its a tie")
     else:
         print("You lost")
         comp_wins+=1
