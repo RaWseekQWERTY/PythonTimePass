@@ -25,4 +25,4 @@ while True:
     else:
         print("Boo!!! Try again")
 
-print("You got it in", guesses, "guesses")
+print("You got it in", guesses, "guess")
