@@ -19,9 +19,16 @@ def get_currency():
     except Exception as e:
         print("Error occurred:", e)
         return None
+    
+def print_currency(currencies):
+    for i in currencies:
+        curr_name = i['currencyName']
+        curr_id = i['id']
+        curr_symbol = i.get("currencySymbol","")
+        print(f"{curr_id} - {curr_name} - {curr_symbol}")
 
 data = get_currency()
 if data is not None:
-    printer.pprint(data)
+    print_currency(data)
 else:
     print("Failed to fetch currency data.")
