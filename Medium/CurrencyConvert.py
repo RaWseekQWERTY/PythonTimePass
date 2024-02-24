@@ -10,6 +10,10 @@ def get_currency():
     endpoint = f"api/v7/currencies?apiKey={API_KEY}" # ?(query)
     url = BASE_URL + endpoint
     data = get(url).json()
-    printer.pprint(data)
     
-get_currency()
+    data = list(data.items())
+    data.sort()
+    return data
+    
+data = get_currency()
+printer.pprint(data)
