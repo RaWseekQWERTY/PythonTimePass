@@ -21,7 +21,7 @@ def get_currency():
         return None
     
 def print_currency(currencies):
-    for i in currencies:
+    for j, i in currencies:
         curr_name = i['currencyName']
         curr_id = i['id']
         curr_symbol = i.get("currencySymbol","")
