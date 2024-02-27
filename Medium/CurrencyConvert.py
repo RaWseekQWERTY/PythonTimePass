@@ -35,7 +35,7 @@ def currency_exc_rate(currency1,currency2):
     if len(data) == 0:
         print("Currency was not found")
         return
-    rate = list(data.values()[0])
+    rate = list(data.values())[0]
     print(f"{currency1}->{currency2}={rate}")
     return rate
 
@@ -49,7 +49,7 @@ def convert_curr(currency1,currency2,amount):
         print("Invalid amount")
         return
     converted_amt = rate * amount
-    print(f"{amount} of {currency1} to {currency2} is equivalent to {converted_amt}")
+    print(f"{amount} of {currency1} to {currency2} is equivalent to {converted_amt} {currency2}")
     return converted_amt
 
 def main():
@@ -66,13 +66,19 @@ def main():
         elif command == "1":
             print_currency(currency)
         elif command == "2":
-            currency1 = input("Enter the first currency: \n")
-            currency2 = input("Enter the second currency: \n")
+            currency1 = input("Enter the first currency: \n").upper()
+            currency2 = input("Enter the second currency: \n").upper()
             amount = input("Enter the amount: \n")
-            converted_amt = convert_curr(currency1,currency2,amount)
-            print(convert_curr)
+            convert_curr(currency1, currency2, amount)
+        elif command == "3":
+            currency1 = input("Enter a base currency: \n").upper()
+            currency2 = input("Enter the second currency: \n").upper()
+            currency_exc_rate(currency1, currency2)
+        else:
+            print("Unknown command: %s" )
+            
     
-
+main()
 # data = get_currency()
 # if data is not None:
 #     print_currency(data)
