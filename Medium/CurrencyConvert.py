@@ -57,6 +57,14 @@ def main():
     print("Welcome to Currency Convert System")
     print("1 - list different currencies")
     print("2 - convert from one currency to another")
+    print("3 - get exchnage rate of two currencies")
+    print()
+    while True:
+        command = input("Enter a command (q to quit): \n").lower()
+        if command == "q":
+            break
+        elif command == "1":
+            print_currency(currency)
     
 
 data = get_currency()
