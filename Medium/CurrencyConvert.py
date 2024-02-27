@@ -33,7 +33,7 @@ def currency_exc_rate(currency1,currency2):
     response = get(url)
     data = response.json()
     if len(data) == 0:
-        print("No Such Currency")
+        print("Currency was not found")
         return
     return list(data.values())[0]
 
