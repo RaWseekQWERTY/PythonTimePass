@@ -35,7 +35,21 @@ def currency_exc_rate(currency1,currency2):
     if len(data) == 0:
         print("Currency was not found")
         return
-    return list(data.values())[0]
+    rate = list(data.values()[0])
+    print(f"{currency1}->{currency2}={rate}")
+    return rate
+
+def convert_curr(currency1,currency2,amount):
+    rate = currency_exc_rate(currency1,currency2)
+    if rate is None:
+        return
+    try:
+        amount = float(amount)
+    except Exception:
+        print("Invalid amount")
+        return
+    converted_amt = rate * amount
+    print(f"{amount} of {currency1} to {currency2} is equivalent to {converted_amt}")
 
 data = get_currency()
 if data is not None:
