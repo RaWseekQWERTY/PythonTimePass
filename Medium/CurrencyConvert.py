@@ -65,10 +65,16 @@ def main():
             break
         elif command == "1":
             print_currency(currency)
+        elif command == "2":
+            currency1 = input("Enter the first currency: \n")
+            currency2 = input("Enter the second currency: \n")
+            amount = input("Enter the amount: \n")
+            converted_amt = convert_curr(currency1,currency2,amount)
+            print(convert_curr)
     
 
-data = get_currency()
-if data is not None:
-    print_currency(data)
-else:
-    print("Failed to fetch currency data.")
+# data = get_currency()
+# if data is not None:
+#     print_currency(data)
+# else:
+#     print("Failed to fetch currency data.")
