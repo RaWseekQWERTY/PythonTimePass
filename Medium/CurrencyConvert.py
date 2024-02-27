@@ -50,6 +50,14 @@ def convert_curr(currency1,currency2,amount):
         return
     converted_amt = rate * amount
     print(f"{amount} of {currency1} to {currency2} is equivalent to {converted_amt}")
+    return converted_amt
+
+def main():
+    currency = get_currency()
+    print("Welcome to Currency Convert System")
+    print("1 - list different currencies")
+    print("2 - convert from one currency to another")
+    
 
 data = get_currency()
 if data is not None:
