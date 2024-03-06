@@ -15,7 +15,7 @@ def wpm_test(stdscr):
     
     while True:
         key = stdscr.getkey()
-        if ord(key) == 27: #ord ASCII key representation 27 = Space
+        if ord(key) == 27: #ord ASCII key representation 27 = Esc
             break
         current_text.append(key)
         stdscr.clear()
